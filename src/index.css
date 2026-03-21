@@ -1,111 +1,105 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display&display=swap');
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+    --background: 40 33% 97%;
+    --foreground: 30 10% 15%;
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
+    --card: 40 25% 95%;
+    --card-foreground: 30 10% 15%;
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 15%;
 
-body {
-  margin: 0;
-}
+    --primary: 158 64% 26%;
+    --primary-foreground: 40 33% 97%;
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
+    --secondary: 32 30% 90%;
+    --secondary-foreground: 30 10% 25%;
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+    --muted: 35 20% 93%;
+    --muted-foreground: 30 8% 50%;
+
+    --accent: 28 60% 52%;
+    --accent-foreground: 40 33% 97%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 18% 88%;
+    --input: 35 18% 88%;
+    --ring: 158 64% 26%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 40 25% 95%;
+    --sidebar-foreground: 30 10% 15%;
+    --sidebar-primary: 158 64% 26%;
+    --sidebar-primary-foreground: 40 33% 97%;
+    --sidebar-accent: 35 20% 93%;
+    --sidebar-accent-foreground: 30 10% 25%;
+    --sidebar-border: 35 18% 88%;
+    --sidebar-ring: 158 64% 26%;
+
+    --font-sans: 'DM Sans', system-ui, sans-serif;
+    --font-display: 'DM Serif Display', Georgia, serif;
   }
 }
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 }
-p {
-  margin: 0;
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .reveal-up {
+    animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .reveal-up-delay-1 {
+    animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+  }
+
+  .reveal-up-delay-2 {
+    animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.16s both;
+  }
+
+  .reveal-up-delay-3 {
+    animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.24s both;
+  }
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
