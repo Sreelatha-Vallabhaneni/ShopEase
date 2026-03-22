@@ -49,7 +49,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-medium text-sm mb-1">Phone</h3>
-                <p className="text-sm text-muted-foreground">+1 (555) 234-5678</p>
+                <p className="text-sm text-muted-foreground">+45 12345678</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -59,7 +59,7 @@ const Contact = () => {
               <div>
                 <h3 className="font-medium text-sm mb-1">Studio</h3>
                 <p className="text-sm text-muted-foreground">
-                  142 Maker Lane<br />Brooklyn, NY 11201
+                  Copenhagen<br />København, DK 1050
                 </p>
               </div>
             </div>

@@ -18,7 +18,7 @@ const About = () => {
               Built on care,<br />made to last
             </h1>
             <p className="text-muted-foreground leading-relaxed max-w-md">
-              ShopEase started in a small Brooklyn workshop in 2019 with a simple idea: everyday objects should be thoughtfully made. We partner with independent artisans and small-batch makers who share our belief that quality materials, honest craft, and fair labor aren't luxuries — they're standards.
+              ShopEase started in a small workshop in 2019 with a simple idea: everyday objects should be thoughtfully made. We partner with independent artisans and small-batch makers who share our belief that quality materials, honest craft, and fair labor aren't luxuries — they're standards.
             </p>
           </div>
           <div className="reveal-up-delay-1">

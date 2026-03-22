@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProductCatalog from "@/components/ProductCatalog";
-//import CartDrawer from "@/components/CartDrawer";
+import CartDrawer from "@/components/CartDrawer";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -10,7 +10,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <ProductCatalog />
-      
+      <CartDrawer />
       <Footer />
     </div>
   );
