@@ -45,7 +45,7 @@ export default function CartDrawer() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="font-medium text-sm leading-snug truncate">{product.name}</h4>
-                    <p className="text-sm text-muted-foreground tabular-nums mt-0.5">${product.price}</p>
+                    <p className="text-sm text-muted-foreground tabular-nums mt-0.5"> DKK {product.price}</p>
                     <div className="flex items-center gap-2 mt-2">
                       <button
                         onClick={() => updateQuantity(product.id, quantity - 1)}
@@ -76,7 +76,7 @@ export default function CartDrawer() {
             <div className="border-t pt-4 space-y-4">
               <div className="flex justify-between items-center">
                 <span className="text-sm text-muted-foreground">Subtotal</span>
-                <span className="font-semibold tabular-nums">${totalPrice.toFixed(2)}</span>
+                <span className="font-semibold tabular-nums">DKK {totalPrice.toFixed(2)}</span>
               </div>
               <button
                 onClick={handleCheckout}

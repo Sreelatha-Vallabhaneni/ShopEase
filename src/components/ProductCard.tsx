@@ -41,7 +41,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
             {product.category}
           </p>
           <h3 className="font-medium text-foreground leading-snug">{product.name}</h3>
-          <p className="text-sm text-muted-foreground tabular-nums">${product.price}</p>
+          <p className="text-sm text-muted-foreground tabular-nums">DKK {product.price}</p>
         </div>
       </Link>
     </div>

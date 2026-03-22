@@ -75,7 +75,7 @@ const ProductDetail = () => {
               </h1>
             </div>
 
-            <p className="text-2xl font-semibold tabular-nums">${product.price}</p>
+            <p className="text-2xl font-semibold tabular-nums">DKK {product.price}</p>
 
             <p className="text-muted-foreground leading-relaxed max-w-md">
               {product.description}
@@ -93,7 +93,7 @@ const ProductDetail = () => {
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Shipping</span>
-                <span>Free over $75</span>
+                <span>Free over DKK 75</span>
               </div>
             </div>
 
