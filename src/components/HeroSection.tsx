@@ -22,7 +22,7 @@ export default function HeroSection() {
               Browse Collection
             </a>
             <a
-              href="#"
+              href="/about"
               className="inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-foreground/15 text-foreground font-medium text-sm hover:bg-muted transition-colors active:scale-[0.97]"
             >
               Our Story
