@@ -5,12 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { CartProvider } from "@/context/CartContext";
 import Index from "./pages/Index.tsx";
-// import ProductDetail from "./pages/ProductDetail.tsx";
-// import About from "./pages/About.tsx";
-//import Contact from "./pages/Contact.tsx";
-//import Checkout from "./pages/Checkout.tsx";
-//import CheckoutSuccess from "./pages/CheckoutSuccess.tsx";
-//import NotFound from "./pages/NotFound.tsx";
+import ProductDetail from "./pages/ProductDetail.tsx";
+
 
 const queryClient = new QueryClient();
 
@@ -23,12 +19,7 @@ const App = () => (
         <BrowserRouter future={{ v7_relativeSplatPath: true }}>
            <Routes>
             <Route path="/" element={<Index />} />
-            {/* <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/checkout/success" element={<CheckoutSuccess />} />
-            <Route path="*" element={<NotFound />} /> */}
+            <Route path="/product/:id" element={<ProductDetail />} />
           </Routes> 
         </BrowserRouter>
       </CartProvider>
