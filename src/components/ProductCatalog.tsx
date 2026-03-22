@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { Search } from "lucide-react";
 import { products, categories } from "@/data/products";
-//import ProductCard from "./ProductCard";
+import ProductCard from "./ProductCard";
 
 export default function ProductCatalog() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
@@ -63,9 +63,9 @@ export default function ProductCatalog() {
         {/* Grid */}
         {filtered.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* {filtered.map((product, i) => (
+            {filtered.map((product, i) => (
               <ProductCard key={product.id} product={product} index={i} />
-            ))} */}
+            ))}
           </div>
         ) : (
           <div className="text-center py-24 text-muted-foreground">
